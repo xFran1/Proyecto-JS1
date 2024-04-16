@@ -267,20 +267,89 @@ cursor:pointer;
     font-size: 13px;
 }
 
-.select1{
-    padding-right: 14px;
+.botonOrdenar{
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 12px;
+    
 }
 
-.select1 option{
-width: 200px;
-padding: 10px; /* Espacio interno de las opciones */
+.ordenar{
+padding-top: 10px;
+padding-bottom: 10px;
+padding-right: 10px;
+background-color: white;
+border: none;
+border: 1px solid rgba(128, 128, 128, 0.484);
+}
+
+.ordenar:hover{
+    background-color: rgb(237, 237, 237);
+    cursor: pointer;
+    transition: all 0.5s ease;
 
 }
 
-#select1 option {
-    height: 40px; /* Altura de las opciones */
-    padding: 10px; /* Espacio interno de las opciones */
-  }
+.ordenarOpciones{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(128, 128, 128, 0.484);
+    margin-top: 49px;
+    margin-left: 12px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+
+}
+
+.ordenarOpciones1{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(128, 128, 128, 0.484);
+    margin-top: 90px;
+    margin-left: 12px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+
+}
+.ordenarOpciones2{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(128, 128, 128, 0.484);
+    margin-top: 130px;
+    margin-left: 12px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+
+}
+
+.opcionOrdenar{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+    text-align: left;
+    
+    
+}
+
+.opcionOrdenar:hover{
+    background-color: rgba(237, 237, 237, 0.627);
+    transition: all 0.5s ease;
+
+}
+
+.dentroOpcion{
+margin-left: 15px;
+}
+
 
 
 

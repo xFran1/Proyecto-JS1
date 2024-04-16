@@ -134,17 +134,31 @@
     </div>
 
     <div class="filtro">
-       
-            <button>        
-                Ordenar <span class="triangulo">▶</span>
+       <div class="botonOrdenar">
+            <button class="ordenar" id="ordenar">        
+                Ordenar <span class="triangulo">▲</span>
             </button>
+        </div>
+        <div class="opcionesBotonOrdenar" id="opcionesBotonOrdenar" style="display:none">
 
-            <select class="select1" id="miSelect" >
-                <option value="opcion0">Ordenar</option>
-                <option value="opcion1">Opción 1</option>
-                <option value="opcion2">Opción 2</option>
-                <option value="opcion3">Opción 3</option>
-              </select>
+            <div class="ordenarOpciones">
+                <button class="opcionOrdenar">
+                    <div class="dentroOpcion">Novedades</div>
+                </button>
+            </div>
+            <div class="ordenarOpciones1">
+                <button class="opcionOrdenar">
+                    <div class="dentroOpcion">Precio más bajo</div>
+                </button>
+            </div>
+
+            <div class="ordenarOpciones2">
+                <button class="opcionOrdenar">
+                    <div class="dentroOpcion">Precio más alto</div>
+                </button>
+            </div>
+        
+        </div>
               
             <!--  <div id="resultado"></div> --> 
 
