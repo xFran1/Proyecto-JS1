@@ -255,12 +255,20 @@ cursor:pointer;
     font-size: 25px;
 }
 
+.container3-texto{
+    height: 1px;
+    width: 180px;
+    background-color: rgb(99, 99, 99);
+    margin: 0 auto;
+}
+
 .filtro{
+    border: 1px solid rgba(190, 190, 190, 0.591);
     margin-top: 30px;
-    background-color: #fcbd7f;
+    background: linear-gradient(to right,#f3c852fb,#f8fa7f);
     height: 60px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 
 .triangulo{
@@ -270,6 +278,20 @@ cursor:pointer;
 .botonOrdenar{
     position: absolute;
     margin-left: 12px;
+    margin-top: 12px;
+    
+}
+
+.botonOrdenar1{
+    position: absolute;
+    margin-left: 190px;
+    margin-top: 12px;
+    
+}
+
+.botonOrdenar2{
+    position: absolute;
+    margin-left: 388px;
     margin-top: 12px;
     
 }
@@ -319,7 +341,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     position: absolute;
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
-    margin-top: 130px;
+    margin-top: 131px;
     margin-left: 12px;
     width: 150px;
     max-width: 150px;
@@ -327,6 +349,90 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     max-height: 40px;
 
 }
+.AordenarOpciones{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(99, 99, 99, 0.484);
+    margin-top: 49px;
+    margin-left: 190px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+}
+
+.A1ordenarOpciones{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(99, 99, 99, 0.484);
+    margin-top: 90px;
+    margin-left: 190px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+}
+
+.A2ordenarOpciones{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(99, 99, 99, 0.484);
+    margin-top: 131px;
+    margin-left: 190px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+}
+
+.A3ordenarOpciones{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(99, 99, 99, 0.484);
+    margin-top: 172px;
+    margin-left: 190px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+}
+
+.A4ordenarOpciones{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(99, 99, 99, 0.484);
+    margin-top: 213px;
+    margin-left: 190px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+}
+
+.BordenarOpciones{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(99, 99, 99, 0.484);
+    margin-top: 49px;
+    margin-left: 388px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+}
+
+.B1ordenarOpciones{
+    position: absolute;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgba(99, 99, 99, 0.484);
+    margin-top: 90px;
+    margin-left: 388px;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+}
+
 
 .opcionOrdenar{
     background-color: rgb(255, 255, 255);
