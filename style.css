@@ -293,7 +293,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
 .ordenarOpciones{
     position: absolute;
     background-color: rgb(237, 237, 237);
-    border: 1px solid rgba(128, 128, 128, 0.484);
+    border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 49px;
     margin-left: 12px;
     width: 150px;
@@ -306,7 +306,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
 .ordenarOpciones1{
     position: absolute;
     background-color: rgb(237, 237, 237);
-    border: 1px solid rgba(128, 128, 128, 0.484);
+    border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 90px;
     margin-left: 12px;
     width: 150px;
@@ -318,7 +318,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
 .ordenarOpciones2{
     position: absolute;
     background-color: rgb(237, 237, 237);
-    border: 1px solid rgba(128, 128, 128, 0.484);
+    border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 130px;
     margin-left: 12px;
     width: 150px;
@@ -341,14 +341,21 @@ border: 1px solid rgba(128, 128, 128, 0.484);
 }
 
 .opcionOrdenar:hover{
-    background-color: rgba(237, 237, 237, 0.627);
+    background-color: rgba(244, 244, 244, 0.627);
     transition: all 0.5s ease;
+    cursor: pointer;
 
 }
 
 .dentroOpcion{
 margin-left: 15px;
 }
+
+.ordenar{
+    display: flex;
+    gap: 5px;
+}
+
 
 
 
