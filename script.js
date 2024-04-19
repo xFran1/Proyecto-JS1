@@ -47,6 +47,8 @@ trianguloApariencia=!trianguloApariencia;
 ordenarApariencia = !ordenarApariencia;
 opcionesBotonOrdenar1.style.display="none";
 opcionesBotonOrdenar2.style.display="none";
+opcionesBotonOrdenar3.style.display="none";
+
 
 trianguloApariencia2=false;
 if(trianguloApariencia2){
@@ -111,6 +113,7 @@ trianguloApariencia2=!trianguloApariencia2;
 ordenarApariencia2 = !ordenarApariencia2;
 opcionesBotonOrdenar.style.display="none";
 opcionesBotonOrdenar2.style.display="none";
+opcionesBotonOrdenar3.style.display="none";
 
 
 });
@@ -134,6 +137,8 @@ trianguloApariencia3=!trianguloApariencia3;
 ordenarApariencia3 = !ordenarApariencia3;
 opcionesBotonOrdenar1.style.display="none";
 opcionesBotonOrdenar.style.display="none";
+opcionesBotonOrdenar3.style.display="none";
+
 
 trianguloApariencia2=false;
 if(trianguloApariencia2){
@@ -178,6 +183,10 @@ document.getElementById("ordenar3").addEventListener("click",() =>{
   }
   trianguloApariencia4=!trianguloApariencia4;
   ordenarApariencia4 = !ordenarApariencia4;
+
+  opcionesBotonOrdenar.style.display="none";
+  opcionesBotonOrdenar1.style.display="none";
+  opcionesBotonOrdenar2.style.display="none";
 
 
   trianguloApariencia=false;
