@@ -265,10 +265,11 @@ cursor:pointer;
 .filtro{
     border: 1px solid rgba(190, 190, 190, 0.591);
     margin-top: 30px;
-    background: linear-gradient(to right,#f3c852fb,#f8fa7f);
+    background: linear-gradient(to right,#ffe259,#ffa751);    
+    
     height: 60px;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 
 .triangulo{
@@ -277,24 +278,33 @@ cursor:pointer;
 
 .botonOrdenar{
     position: absolute;
-    margin-left: 12px;
+    margin-left: 60px;
     margin-top: 12px;
     
 }
 
 .botonOrdenar1{
     position: absolute;
-    margin-left: 190px;
+    margin-left: 280px;
     margin-top: 12px;
     
 }
 
 .botonOrdenar2{
     position: absolute;
-    margin-left: 388px;
+    margin-left: 510px;
     margin-top: 12px;
     
 }
+
+.CordenarOpciones{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 12px;
+    
+}
+
+
 
 .ordenar{
 padding-top: 10px;
@@ -317,7 +327,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 49px;
-    margin-left: 12px;
+    margin-left: 60px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -330,7 +340,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 90px;
-    margin-left: 12px;
+    margin-left: 60px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -342,7 +352,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 131px;
-    margin-left: 12px;
+    margin-left: 60px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -354,7 +364,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 49px;
-    margin-left: 190px;
+    margin-left: 280px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -366,7 +376,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 90px;
-    margin-left: 190px;
+    margin-left: 280px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -378,7 +388,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 131px;
-    margin-left: 190px;
+    margin-left: 280px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -390,7 +400,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 172px;
-    margin-left: 190px;
+    margin-left: 280px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -402,7 +412,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 213px;
-    margin-left: 190px;
+    margin-left: 280px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -414,7 +424,7 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 49px;
-    margin-left: 388px;
+    margin-left: 510px;
     width: 150px;
     max-width: 150px;
     height: 40px;
@@ -426,12 +436,14 @@ border: 1px solid rgba(128, 128, 128, 0.484);
     background-color: rgb(237, 237, 237);
     border: 1px solid rgba(99, 99, 99, 0.484);
     margin-top: 90px;
-    margin-left: 388px;
+    margin-left: 510px;
     width: 150px;
     max-width: 150px;
     height: 40px;
     max-height: 40px;
 }
+
+
 
 
 .opcionOrdenar{
@@ -462,8 +474,130 @@ margin-left: 15px;
     gap: 5px;
 }
 
+.CaordenarOpciones{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+
+    border: 1px solid rgba(99, 99, 99, 0.484);
+    margin-top: 49px;
+    margin-left: 750px;
+    width: 300px;
+    max-width: 300px;
+    height: 100px;
+    max-height: 100px;
+}
+
+.wrapper-input-precio{
+    display: flex;
+    margin-left: 20px; 
+     position: absolute;
+
+    background-color: #ffffff;
+    padding:0% ;
+    width: 35%;
+    border: 1px solid black;
+}
+
+.input-precio1{
+    
+    border: none;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    outline: none;
+
+}
+
+.wrapper-input-precio2{
+    display: flex;
+    position: absolute;
+margin-left: 170px;
+    background-color: #ffffff;
+    padding:0% ;
+    width: 35%;
+    border: 1px solid black;
+}
+
+.input-precio2{
+    
+    border: none;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    outline: none;
+
+}
+
+.inputs{
+    margin-top: 20px;
+    display: flex;
+}
+
+.icono{
+    margin-left: 80px;
+    position: absolute;
+    margin-top: 7px;
+    font-size: 20px;
+}
+
+.palo{
+    position: absolute;
+    height: 1px;
+    width: 20px;
+    background-color: black;
+    margin-left: 139px;
+    margin-top: 17px;
+}
+.envio{
+    position: absolute;
+    font-size: 12px;
+    margin-top: 45px;
+    margin-left: 27px;
+    color: grey;
+    
+}
 
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.filtro-dentro{
+    display: flex;
+    text-align: center;
+    
+}
+
+.container-grid-fuera{
+text-align: center;
+
+}
+
+.container-grid{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));  grid-gap: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.container-grid-producto{
+    background-color: rgb(252, 236, 207);
+    width: 300px;
+    max-width: 300px;
+    height: 300px;
+    text-align: center;
+    border: 1px solid rgba(162, 162, 162, 0.427);
+}
+
+.container-grid-producto:hover{
+    transition: all 1s ease;
+    cursor: pointer;
+}
 
 
 
