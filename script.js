@@ -116,6 +116,7 @@ opcionesBotonOrdenar2.style.display="none";
 opcionesBotonOrdenar3.style.display="none";
 
 
+
 });
 
 document.getElementById("ordenar2").addEventListener("click",() =>{
@@ -135,10 +136,9 @@ if(trianguloApariencia3){
 }
 trianguloApariencia3=!trianguloApariencia3;
 ordenarApariencia3 = !ordenarApariencia3;
-opcionesBotonOrdenar1.style.display="none";
 opcionesBotonOrdenar.style.display="none";
+opcionesBotonOrdenar1.style.display="none";
 opcionesBotonOrdenar3.style.display="none";
-
 
 trianguloApariencia2=false;
 if(trianguloApariencia2){
@@ -183,7 +183,6 @@ document.getElementById("ordenar3").addEventListener("click",() =>{
   }
   trianguloApariencia4=!trianguloApariencia4;
   ordenarApariencia4 = !ordenarApariencia4;
-
   opcionesBotonOrdenar.style.display="none";
   opcionesBotonOrdenar1.style.display="none";
   opcionesBotonOrdenar2.style.display="none";
@@ -216,4 +215,205 @@ if(trianguloApariencia3){
 
 });
 
+//region Objetos
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  let contador = 1;
+  let nombreImagen="imagen";
+  let nombreLibro="container-grid-producto-titulo-";
+  let tipoTapa="container-grid-producto-tapa-";
+  let dinero="container-grid-producto-precio-";
+  let autor="container-grid-producto-autor-";
+  let producto="container-grid-producto-";
+
+  
+    productos.forEach(elemento =>{
+      let imagen=nombreImagen+""+contador;
+      let nombre=nombreLibro+""+contador;
+      let tapa=tipoTapa+""+contador;
+      let diner=dinero+""+contador;
+      let auto=autor+""+contador;
+      let product=producto+""+contador; //Con esto todos los que no sean novedad los filtro
+
+      let imagenEncontrada=document.getElementById(imagen);
+      let nombreEncontrada=document.getElementById(nombre); 
+      let tapaEncontrada=document.getElementById(tapa);
+      let dineroEncontrada=document.getElementById(diner);
+      let autorEncontrada=document.getElementById(auto);
+      let productoEncontrada=document.getElementById(product)
+
+      imagenEncontrada.src=elemento.foto;
+      nombreEncontrada.textContent=elemento.nombre;
+      tapaEncontrada.textContent=elemento.tapa
+      dineroEncontrada.textContent=elemento.precio
+      autorEncontrada.textContent=elemento.autor
+      productoEncontrada.style.display="block";
+
+      contador++;
+  });
+});
+
+
+
+
+let productos = [
+  {
+    autor:"Felipe",
+    nombre: "El cazador",
+    precio: 15,
+    foto: "imgProductos/Elcazador.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+
+  },
+  {
+    autor:"Juan Martin",
+    nombre: "Las guerreras maxwell",
+    precio: 30,
+    foto: "imgProductos/Las guerreras maxwell.webp",
+    tapa:"Tapa dura",
+    novedad:true
+
+  },
+  {
+    autor:"Unamuno Martinez",
+    nombre: "Saltan chispas",
+    precio: 21.4,
+    foto: "imgProductos/Saltan chispas.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  }
+];
+
+document.getElementById("ordenarMayorMenor").addEventListener("click",() =>{
+
+productos.sort(function(a,b){
+return b.precio-a.precio;
+});
+
+let contador = 1;
+  let nombreImagen="imagen";
+  let nombreLibro="container-grid-producto-titulo-";
+  let tipoTapa="container-grid-producto-tapa-";
+  let dinero="container-grid-producto-precio-";
+  let autor="container-grid-producto-autor-";
+  let producto="container-grid-producto-";
+
+  
+    productos.forEach(elemento =>{
+      let imagen=nombreImagen+""+contador;
+      let nombre=nombreLibro+""+contador;
+      let tapa=tipoTapa+""+contador;
+      let diner=dinero+""+contador;
+      let auto=autor+""+contador;
+      let product=producto+""+contador; //Con esto todos los que no sean novedad los filtro
+
+      let imagenEncontrada=document.getElementById(imagen);
+      let nombreEncontrada=document.getElementById(nombre); 
+      let tapaEncontrada=document.getElementById(tapa);
+      let dineroEncontrada=document.getElementById(diner);
+      let autorEncontrada=document.getElementById(auto);
+      let productoEncontrada=document.getElementById(product)
+
+      imagenEncontrada.src=elemento.foto;
+      nombreEncontrada.textContent=elemento.nombre;
+      tapaEncontrada.textContent=elemento.tapa
+      dineroEncontrada.textContent=elemento.precio
+      autorEncontrada.textContent=elemento.autor
+      productoEncontrada.style.display="block";
+
+      contador++;
+  });
+
+console.log("mayor a menor")
+});
+
+document.getElementById("ordenarMenorMayor").addEventListener("click",() =>{
+
+  productos.sort(function(a,b){
+  return a.precio-b.precio;
+  });
+  
+  let contador = 1;
+  let nombreImagen="imagen";
+  let nombreLibro="container-grid-producto-titulo-";
+  let tipoTapa="container-grid-producto-tapa-";
+  let dinero="container-grid-producto-precio-";
+  let autor="container-grid-producto-autor-";
+  let producto="container-grid-producto-";
+
+  
+    productos.forEach(elemento =>{
+      let imagen=nombreImagen+""+contador;
+      let nombre=nombreLibro+""+contador;
+      let tapa=tipoTapa+""+contador;
+      let diner=dinero+""+contador;
+      let auto=autor+""+contador;
+      let product=producto+""+contador; //Con esto todos los que no sean novedad los filtro
+
+      let imagenEncontrada=document.getElementById(imagen);
+      let nombreEncontrada=document.getElementById(nombre); 
+      let tapaEncontrada=document.getElementById(tapa);
+      let dineroEncontrada=document.getElementById(diner);
+      let autorEncontrada=document.getElementById(auto);
+      let productoEncontrada=document.getElementById(product)
+
+      imagenEncontrada.src=elemento.foto;
+      nombreEncontrada.textContent=elemento.nombre;
+      tapaEncontrada.textContent=elemento.tapa
+      dineroEncontrada.textContent=elemento.precio
+      autorEncontrada.textContent=elemento.autor
+      productoEncontrada.style.display="block";
+
+      contador++;
+    });
+  
+  console.log("menor a mayor")
+  });
+//Novedad
+document.getElementById("novedad").addEventListener("click",() =>{
+  let contador = 1;
+let nombreImagen="imagen";
+let nombreLibro="container-grid-producto-titulo-";
+let tipoTapa="container-grid-producto-tapa-";
+let dinero="container-grid-producto-precio-";
+let autor="container-grid-producto-autor-";
+let producto="container-grid-producto-";
+
+  productos.forEach(elemento =>{
+    let imagen=nombreImagen+""+contador;
+    let nombre=nombreLibro+""+contador;
+    let tapa=tipoTapa+""+contador;
+    let diner=dinero+""+contador;
+    let auto=autor+""+contador;
+    let product=producto+""+contador; //Con esto todos los que no sean novedad los filtro
+
+    let imagenEncontrada=document.getElementById(imagen);
+    let nombreEncontrada=document.getElementById(nombre); 
+    let tapaEncontrada=document.getElementById(tapa);
+    let dineroEncontrada=document.getElementById(diner);
+    let autorEncontrada=document.getElementById(auto);
+    let productoEncontrada=document.getElementById(product)
+    imagenEncontrada.src=elemento.foto;
+    nombreEncontrada.textContent=elemento.nombre;
+    tapaEncontrada.textContent=elemento.tapa
+    dineroEncontrada.textContent=elemento.precio
+    autorEncontrada.textContent=elemento.autor
+  
+    if(elemento.novedad==false){
+      productoEncontrada.style.display="none";
+    }
+
+    contador++;
+  });
+   
+    });
+
+document.getElementById("prueba").addEventListener("click",() =>{
+
+console.log("Ordenacion simple")
+
+});
 

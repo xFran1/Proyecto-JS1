@@ -589,7 +589,7 @@ text-align: center;
     background-color: rgb(252, 236, 207);
     width: 300px;
     max-width: 300px;
-    height: 300px;
+    height: 450px;
     text-align: center;
     border: 1px solid rgba(162, 162, 162, 0.427);
 }
@@ -597,14 +597,89 @@ text-align: center;
 .container-grid-producto:hover{
     transition: all 1s ease;
     cursor: pointer;
+    background-color: #f9e688;
 }
+
+
 
 .container-grid-producto-titulo-1{
     background-color: #ffe259;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 18px;
 }
 
+
+
 .container-grid-producto-imagen-1{
-    
+  margin-top: 20px;
+ 
+}
+
+
+
+.container-grid-producto-tapa-1{
+    background-color: #ffe259;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 60px;
+    margin-right: 60px;
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+}
+
+
+
+
+
+.container-grid-producto-autor-1{
+    background-color: #ffe259;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 60px;
+    margin-right: 60px;
+    color: rgb(102, 102, 102);
+    font-size: 13px;
+    font-style: italic;
+
+}
+
+
+.container-grid-producto-precio-1{
+    margin-left: 60px;
+    margin-top: 5px;
+    font-size: 22px;
+    text-align: left;
+    display: flex;
+    color: rgb(202, 48, 48);
+
+}
+
+
+
+
+.simbolo{
+    margin-top: 7px;
+font-size: 19px;
+    margin-left: 5px;
+    color: rgb(202, 48, 48);
+}
+
+.box-shadow-image{
+    box-shadow: 1px 1px 1px grey;
+}
+
+.espacio-grid{
+    height: 1px;
+    width: 200px;
+    background-color: rgb(180, 178, 178);
+    margin: 0 auto;
+    margin-top: 8px;
+}
+.juntar{
+    display: flex;
 }
 
 
