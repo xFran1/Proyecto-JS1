@@ -483,8 +483,14 @@ margin-left: 15px;
     margin-left: 750px;
     width: 300px;
     max-width: 300px;
-    height: 100px;
-    max-height: 100px;
+    height: 130px;
+    max-height: 130px;
+}
+.botonInput{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 5px;
 }
 
 .wrapper-input-precio{
@@ -603,7 +609,6 @@ text-align: center;
 
 
 .container-grid-producto-titulo-1{
-    background-color: #ffe259;
     margin-top: 5px;
     text-align: left;
     margin-left: 60px;
@@ -621,7 +626,6 @@ text-align: center;
 
 
 .container-grid-producto-tapa-1{
-    background-color: #ffe259;
     margin-top: 5px;
     text-align: left;
     margin-left: 60px;
@@ -635,7 +639,6 @@ text-align: center;
 
 
 .container-grid-producto-autor-1{
-    background-color: #ffe259;
     margin-top: 5px;
     text-align: left;
     margin-left: 60px;
@@ -681,6 +684,8 @@ font-size: 19px;
 .juntar{
     display: flex;
 }
+
+
 
 
 
