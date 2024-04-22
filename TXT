@@ -1,0 +1,5 @@
+Romance 9
+Novela 20
+Thriller 8 
+Ciencia-Ficción 8
+Terror 5

@@ -260,28 +260,301 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let productos = [
   {
-    autor:"Felipe",
-    nombre: "El cazador",
-    precio: 15,
+    autor:"RUNYX",
+    nombre: "EL CAZADOR",
+    tipo:"Novela Romance",
+    precio: 18.90,
     foto: "imgProductos/Elcazador.webp",
     tapa:"Tapa blanda",
     novedad:true
 
   },
   {
-    autor:"Juan Martin",
-    nombre: "Las guerreras maxwell",
-    precio: 30,
+    autor:"MEGAN MAXWELL",
+    nombre: "LAS GUERRERAS MAXWELL",
+    tipo:"Romance",
+    precio: 17.10,
     foto: "imgProductos/Las guerreras maxwell.webp",
     tapa:"Tapa dura",
     novedad:true
 
   },
   {
-    autor:"Unamuno Martinez",
-    nombre: "Saltan chispas",
-    precio: 21.4,
+    autor:"HANNAH GRACE",
+    nombre: "SALTAN CHISPAS",
+    tipo:"Novela Romance",
+    precio: 18.9,
     foto: "imgProductos/Saltan chispas.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  } ,
+  {
+    autor:"ANA HUANG",
+    nombre: "PECADOS 1. REY DE LA IRA.",
+    tipo:"Novela",
+    precio: 22.75,
+    foto: "imgProductos/Pecados.jpg",
+    tapa:"Tapa dura",
+    novedad:true
+  } ,
+  {
+    autor:"TAMARA MOLINA",
+    nombre: "DONDE NO PUEDAS ENCONTRARME",
+    tipo:"Novela Romance",
+    precio: 16.05,
+    foto: "imgProductos/DONDE.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+  },
+  {
+    autor:"FREIDA MCFADDEN",
+    nombre: "EL SECRETO DE LA ASISTENTA",
+    tipo:"Novela",
+    precio: 19.85,
+    foto: "imgProductos/ELSECRETO.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"JUAN GOMEZ JURADO",
+    nombre: "TODO ARDE",
+    tipo:"Novela",
+    precio: 14.20,
+    foto: "imgProductos/TODOARDE.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+  },
+  {
+    autor:"CIXIN LIU",
+    nombre: "EL PROBLEMA DE LOS TRES CUERPOS",
+    tipo:"Novela Ciencia-Ficción",
+    precio: 25.55,
+    foto: "imgProductos/ELPROBLEMADE.webp",
+    tapa:"Tapa dura",
+    novedad:false
+  },
+  {
+    autor:"CIXIN LIU",
+    nombre: "LA TIERRA ERRANTE",
+    tipo:"Ciencia-Ficción",
+    precio: 14.20,
+    foto: "imgProductos/latierraerrante.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+  },
+  {
+    autor:"DMITRY GLUKHOVSKY",
+    nombre: "OUTPOST Nº 02",
+    tipo:"Ciencia-Ficción",
+    precio: 18.95,
+    foto: "imgProductos/OUTPOST.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"OLAF STAPLEDON",
+    nombre: "HACEDOR DE ESTRELLAS",
+    tipo:"Novela Ciencia-Ficción",
+    precio: 18,
+    foto: "imgProductos/HACEDOR.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"XIRAN JAY ZHAO",
+    nombre: "HEAVENLY TYRANT",
+    tipo:"Ciencia-Ficción",
+    precio: 18.52,
+    foto: "imgProductos/HEAVENLY.jpg",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"FRANK HERBERT",
+    nombre: "DUNE (EDICIÓN PELÍCULA)",
+    tipo:"Ciencia-Ficción",
+    precio: 11.35,
+    foto: "imgProductos/DUNE.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"XAVIER MARTINEZ BALLESTER",
+    nombre: "LOS HEREDEROS DEL MUNDO",
+    tipo:"Novela Ciencia-Ficción",
+    precio: 11.35,
+    foto: "imgProductos/losherederos.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+  },
+  {
+    autor:"KRISTIN HANNAH",
+    nombre: "LAS MUJERES DE LA GUERRA",
+    tipo:"Novela Romance",
+    precio: 20.80,
+    foto: "imgProductos/lasmujeres.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"EMILY HENRY",
+    nombre: "UN LUGAR FELIZ",
+    tipo:"Novela Romance",
+    precio: 18.05,
+    foto: "imgProductos/UNLUGAR.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"INMA RUBIALES",
+    nombre: "EL ARTE DE SER NOSOTROS",
+    tipo:"Novela Romance",
+    precio: 17.95,
+    foto: "imgProductos/ELARTE.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+  },
+  {
+    autor:"ALOMA MARTINEZ",
+    nombre: "EL SÍNDROME DE LA CHICA CON SUERTE",
+    tipo:"Novela Romance",
+    precio: 19.85,
+    foto: "imgProductos/ELSINDROME.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+  },
+  {
+    autor:"ALICE KELLEN",
+    nombre: "EL DIA QUE DEJO DE NEVAR EN ALASKA",
+    tipo:"Novela Romance",
+    precio: 15.19,
+    foto: "imgProductos/ELDIAQUE.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"ANA ALVAREZ",
+    nombre: "UN ROMANCE PROHIBIDO",
+    tipo:"Novela Romance",
+    precio: 4.74,
+    foto: "imgProductos/UNROMANCE.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"TOM FOWLER",
+    nombre: "REDLINE",
+    tipo:"Thriller",
+    precio: 3.99,
+    foto: "imgProductos/redline.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"MARTA MARTIN GIRON",
+    nombre: "DAMA BLANCA",
+    tipo:"Thriller",
+    precio: 9.49,
+    foto: "imgProductos/damab.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+  },
+  {
+    autor:"GUILLERMO GALVAN",
+    nombre: "EL CLUB DE LAS VIUDAS.",
+    tipo:"Novela Thriller",
+    precio: 10.44,
+    foto: "imgProductos/elclubd.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"MORGAN RICE",
+    nombre: "TRANSMISIÓN",
+    tipo:"Thriller",
+    precio: 2.84,
+    foto: "imgProductos/TRANSMI.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"MARK ROY ADÁN",
+    nombre: "EL ENIGMA DE ROSWELL.",
+    tipo:"Thriller",
+    precio: 4.99,
+    foto: "imgProductos/ELENIGMADE.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"JONAS HERLIN",
+    nombre: "EL GABINETE DE LAS BRUJAS DE NORDERNEY",
+    tipo:"Novela Thriller",
+    precio: 2.84,
+    foto: "imgProductos/elgabi.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"STHEPEN KING",
+    nombre: "SI TE GUSTA LA OSCURIDAD",
+    tipo:"Novela Terror",
+    precio: 23.65,
+    foto: "imgProductos/sitegusta.webp",
+    tapa:"Tapa dura",
+    novedad:false
+  },
+  {
+    autor:"CHARLAINE HARRIS",
+    nombre: "EL DÍA DEL JUICIO MORTAL",
+    tipo:"Novela Terror",
+    precio: 12.30,
+    foto: "imgProductos/ELDIADEL.webp",
+    tapa:"Tapa dura",
+    novedad:false
+  },
+  {
+    autor:"CHARLAINE HARRIS",
+    nombre: "EL DÍA DEL JUICIO MORTAL",
+    tipo:"Novela Terror",
+    precio: 12.30,
+    foto: "imgProductos/ELDIADEL.webp",
+    tapa:"Tapa dura",
+    novedad:false
+  },
+  {
+    autor:"VICTORIA ALVAREZ",
+    nombre: "HOJAS DE DEDALERA",
+    tipo:"Terror",
+    precio: 18.95,
+    foto: "imgProductos/HOJASDE.webp",
+    tapa:"Tapa dura",
+    novedad:false
+  },
+  {
+    autor:"ALMA KATSU",
+    nombre: "THE DEEP. LAS PROFUNDIDADES",
+    tipo:"Terror",
+    precio: 18.95,
+    foto: "imgProductos/THEDEEP.webp",
+    tapa:"Tapa blanda",
+    novedad:false
+  },
+  {
+    autor:"IKER UNZU",
+    nombre: "ESCAPANDO DE LA MANSIÓN EMBRUJADA",
+    tipo:"Terror",
+    precio: 14.15,
+    foto: "imgProductos/escapandode.webp",
+    tapa:"Tapa blanda",
+    novedad:true
+  },
+  {
+    autor:"GOLDY MOLDAVSKY",
+    nombre: "EL CLUB DE MARY SHELLEY",
+    tipo:"Terror",
+    precio: 20.80,
+    foto: "imgProductos/elclubde.webp",
     tapa:"Tapa blanda",
     novedad:false
   }
