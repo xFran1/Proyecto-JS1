@@ -592,7 +592,7 @@ text-align: center;
 }
 
 .container-grid-producto{
-    background-color: rgb(252, 236, 207);
+    background-color: rgb(249, 238, 218);
     width: 300px;
     max-width: 300px;
     height: 450px;
@@ -602,8 +602,7 @@ text-align: center;
 
 .container-grid-producto:hover{
     transition: all 1s ease;
-    cursor: pointer;
-    background-color: #f9e688;
+    background-color: #f9eebb;
 }
 
 
@@ -686,6 +685,40 @@ font-size: 19px;
 }
 
 
+.iconoCarro{
+position: relative;
+margin-left: 200px;
+
+
+
+}
+
+.juntarCarro{
+    position: absolute;
+    margin-top: 380px;
+}
+
+.anadir:hover{
+    background-color: rgba(155, 253, 253, 0.604);
+    transition: all 1s ease;
+}
+.carro{
+    background-color: #f6e18e8a;
+    outline: none;
+    padding: 8px;
+    border-radius: 50px;
+    border:none;
+    border: 1px solid grey;
+}
+.carro:hover{
+    background-color: rgba(255, 175, 36, 0.667);
+    transition: all 1s ease;
+    cursor: pointer;
+
+}
+.carroSimbolo{
+    font-size: 16px;
+}
 
 
 
