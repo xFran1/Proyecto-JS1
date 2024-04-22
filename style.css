@@ -685,18 +685,19 @@ font-size: 19px;
 }
 
 
+
 .iconoCarro{
-position: relative;
-margin-left: 200px;
 
-
-
+position: absolute;
+margin-left: 190px;
+margin-top: 360px;
+padding: 10px 20px; 
+font-size: 16px; 
+border-radius: 50%; 
 }
 
-.juntarCarro{
-    position: absolute;
-    margin-top: 380px;
-}
+
+
 
 .anadir:hover{
     background-color: rgba(155, 253, 253, 0.604);
@@ -711,7 +712,7 @@ margin-left: 200px;
     border: 1px solid grey;
 }
 .carro:hover{
-    background-color: rgba(255, 175, 36, 0.667);
+    background-color: rgba(255, 200, 160, 0.667);
     transition: all 1s ease;
     cursor: pointer;
 
