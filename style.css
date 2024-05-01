@@ -2,8 +2,16 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins',sans-serif;
-    background-color: rgba(249, 237, 215, 0.595);
+    background-color: rgb(251, 247, 240);
+    overflow-y: auto;
+    overflow-x: hidden;
+
 }
+*{
+    scrollbar-color: #09f rgb(252, 221, 137);
+
+}
+
 
 .imagen-atencionCliente{
     font-size: 25px;
@@ -26,7 +34,19 @@ font-size: 14px;
 }
 
 .container-indice{
+    top: 0px;
     display: flex;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    background-color: rgb(251, 247, 240);
+
+}
+
+.usuarioGrande{
+    z-index: 11;
+    position: fixed;
+    left: 83%;
 }
 
 .container-inicio{
@@ -42,11 +62,41 @@ font-size: 14px;
 }
 
 .container-usuario{
-    position: absolute;
-    top: 44px;
-    left: 83%; /* Lo movemos hacia la derecha la mitad de su anchura */
-    transform: translate(-50%, -50%); 
-    font-size: 30px;
+    display: flex;
+   
+   
+    
+}
+.alerta{
+    position: fixed;
+    text-align: center;
+    width: 250px;
+    height: 125px;
+    background-color: rgb(250, 236, 213);
+    transform: translate(-50%, -50%);
+    left: 90%;
+    top: 80px;
+    border: 1px solid rgb(193, 193, 193);
+    border-radius: 5px;
+    z-index: 1;
+}
+.div1{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+
+
+}
+.alertaTexto{
+    font-size: 15px;
+}
+.divNombreUsuario{
+    position: fixed;
+    font-size: 14px;
+    margin-left: 38px;
+    z-index: 15;
+
 }
 .container-carrito{
     display: flex;
@@ -54,16 +104,37 @@ font-size: 14px;
     top: 42px;
     left: 92%; /* Lo movemos hacia la derecha la mitad de su anchura */
     transform: translate(-50%, -50%); 
+    cursor: pointer;
 }
 
 .container-carrito-texto{
-    margin-top: 10px;
-    margin-left: 10px;
+    position: absolute;
+    margin-top: 27px;
+    margin-left: 29px;
     font-size: 15px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 20, 20);
+}
+.textoInterior{
+    text-align: center;
+    white-space: nowrap; 
+    color: rgb(0, 0, 0);
+    width: 19px;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    overflow: hidden; 
+  text-overflow: ellipsis; 
+
 }
 .container-indice-inferior{
     background: linear-gradient(to right,#ffe259,#ffa751);
+    width:102%;
     height: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 82px;
 }
 
 .container-indice-inferior-dentro{
@@ -145,6 +216,7 @@ cursor:pointer;
 }
 
 .container-contenido{
+    margin-top: 110px;
     display: flex;
 }
 
@@ -602,7 +674,7 @@ text-align: center;
 
 .container-grid-producto:hover{
     transition: all 1s ease;
-    background-color: #f9eebb;
+    background-color: #f8eabc;
 }
 
 
@@ -614,7 +686,6 @@ text-align: center;
     margin-right: 60px;
     font-size: 18px;
 }
-
 
 
 .container-grid-producto-imagen-1{
@@ -633,10 +704,6 @@ text-align: center;
     font-size: 14px;
 }
 
-
-
-
-
 .container-grid-producto-autor-1{
     margin-top: 5px;
     text-align: left;
@@ -645,7 +712,6 @@ text-align: center;
     color: rgb(102, 102, 102);
     font-size: 13px;
     font-style: italic;
-
 }
 
 
@@ -861,7 +927,7 @@ font-style: italic;
 
 }
 
-.botoncito{
+.botoncito {
     position: absolute;
     border-radius: 50%;
     height: 30px;
@@ -870,7 +936,7 @@ font-style: italic;
     background-color: rgba(193, 193, 193, 0.369);
 }
 
-.botoncito:hover{
+.botoncito:hover {
     transition: 1s all ease;
     background-color: rgba(246, 197, 90, 0.423);
     cursor: pointer;
@@ -968,5 +1034,229 @@ gap: 7px;
 
 .simboloInterior{
     margin-top: 2px;
+}
+
+
+
+.container-usuario{
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-bottom: none;
+}
+
+.usuarioIncioSesionBlock{
+    position: fixed;
+    top: 113px;
+    left: 1448px; /* Lo movemos hacia la derecha la mitad de su anchura */
+    transform: translate(-50%, -50%); 
+    width: 300px;
+    z-index: 15;
+  
+    height: 100px;
+    font-size: 15px;
+    background-color: rgb(251, 247, 240);
+    border: 2px solid black;
+    
+}
+
+.cerrarSesion{
+    position: absolute;
+    top: 89px;
+    left: 1710px; 
+    transform: translate(-50%, -50%); 
+    width: 300px;
+
+    height: 50px;
+    font-size: 15px;
+    background-color: rgb(251, 247, 240);
+    border: 2px solid black;
+    
+}
+
+
+
+
+::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 10px;
+}
+.divInteriorScroll{
+    position: absolute;
+    margin-top: 30px;
+}
+.encabezado-scrollbox{
+    
+    font-size: 20px;
+    
+    position: absolute;
+    left: 155px;
+}
+.comprasDiv{
+background-color: white;
+height: 90px;
+width: 330px;
+margin-top: 10px;
+}
+.divFoto{
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 5px;
+    
+}
+.fotoBorde{
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px grey;
+}
+.nombreLibro{
+    position: absolute;
+    margin-left: 85px;
+    margin-top: 20px;
+    font-size: 12px;
+    width: 150px;
+    height: 36px;
+    max-height: 36px;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+.nombreAutor{
+   position: absolute;
+   margin-left: 85px;
+   margin-top: 60px;
+
+   font-size: 11px;
+   font-style: italic;
+    color: rgb(61, 61, 61);
+}
+.sidebar{
+    
+    position: fixed;
+    top: 8.6%;
+    left: 80%;
+    width: 350px;
+    height: 40%;
+    background: linear-gradient(-45deg,#fbb073,#f3f36d);
+   border: 1px solid black;
+   z-index: 1;
+    
+    padding: 20px 5px 0 20px;
+}
+.unidades{
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+.unidadInput{
+    width: 20px;
+
+}
+.unidadBoton{
+    outline: none;
+}
+
+.unidadBoton:hover{
+    cursor: pointer;
+}
+.textoCoste{
+    font-size: 15px;
+}
+.coste{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 225px;
+    display: flex;
+    font-size: 15px;
+
+}
+.comprasDiv{
+    border: 1px solid rgb(26, 26, 26);
+    box-shadow: 2px 2px 4px black;
+}
+.divInteriorScroll{
+    flex-direction: column;
+    position: absolute;
+    height: 330px;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.scrollbox{
+    overflow: auto;
+padding-right: 0px;
+visibility:hidden;
+scrollbar-color: #09f transparent;
+}
+.scrollbox-inner,
+.scrollbox:hover{
+    visibility: visible;
+}
+
+
+
+.botonCerrarSesion{
+    width: 280px;
+    height: 32px;
+    margin-left: 10px;
+    margin-top: 9px;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    }
+    
+.botonCerrarSesion:hover{
+    background-color: rgb(117, 117, 117);
+    transition: 0.3s all ease;
+    cursor: pointer;
+    
+}
+    
+.barrita{
+    position: absolute;
+    top: 63px;
+    left: 1579px; /* Lo movemos hacia la derecha la mitad de su anchura */
+    transform: translate(-50%, -50%); 
+   height: 4px;
+   width: 38px;
+   background-color: rgb(251, 247, 240);
+   z-index: 16;
+   position: fixed;
+}
+
+.container-usuario{
+    position: absolute;
+    top: 44px;
+    left: 83%; /* Lo movemos hacia la derecha la mitad de su anchura */
+    transform: translate(-50%, -50%); 
+    font-size: 30px;
+}
+.inicio-Sesion-Real{
+width: 280px;
+height: 32px;
+margin-left: 10px;
+margin-top: 13px;
+background-color: rgb(22, 22, 22);
+color: white;
+border: 1px solid rgb(0, 0, 0);
+}
+
+.inicio-Sesion-Real:hover{
+    background-color: rgb(117, 117, 117);
+    transition: 0.3s all ease;
+    cursor: pointer;
+
+}
+
+.registrarseJuntar{
+    margin-top: 15px;
+    margin-left: 34px;
+    display: flex;
+    gap: 5px;
+}
+.registrarse{
+    color: rgb(226, 0, 0);
+}
+.registrarse:hover{
+    border-bottom: 1px solid rgb(255, 0, 0);
+    cursor: pointer;
 }
 
