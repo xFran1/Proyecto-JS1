@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libros.net</title>
     <link rel="icon" type="image/png" href="img/icono.png">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -52,8 +53,34 @@
         </div>
         
     </div>
-    <div class="sidebarMonto">
-        <div class="divPrecioTotal" id="divPrecioTotal"></div>
+    
+    <div class="sidebarMonto" style="display:none" id="cesta1">
+        <div class="pedidos">
+
+            <div class="juntar4">
+                <div class="precioLibros">Precio de los libros:</div>
+               
+                <div class="divPrecioTotal" id="PrecioTotal" value="number">0</div>€
+    
+            </div> 
+            <div class="juntar6" id="envio" style="display:none">
+                <div class="precioLibros">Precio envio:<div class="divPrecioTotal" id="contenidoEnvio" value="number">0</div>
+            </div>
+               
+    
+            </div>
+    
+           <div class="juntar6" id="precioFinal" style="display:none">
+                <div class="precioLibros">Precio final:                <div class="divPrecioTotal" id="PrecioFinal" value="number">0</div>€
+            </div>
+               
+    
+            </div>
+
+        </div>
+       
+       
+        <button class="pagar" id="pagar" >REALIZAR PEDIDO</button>
     </div>
     <div class="container-indice-inferior" >
         <div class="container-indice-inferior-dentro">
@@ -64,9 +91,9 @@
 
 
             <div class="container-buscador">
-                <input class="buscador" placeholder="Búsca aquí">
+                <input class="buscador" id="buscador" placeholder="Búsca aquí">
                 <div class="container-buscador1">
-                    <button class="buscador1">
+                    <button class="buscador1" id="buscador1">
                 </div>
             </div>
 
@@ -114,7 +141,7 @@
     </div>
 
     </div>
-    <nav class="sidebar" style="display:block" id="cesta">
+    <nav class="sidebar" style="display:none" id="cesta">
       
         <div class="scrollbox">
             
@@ -195,8 +222,12 @@
     </div>
 
     <div class="filtro">
+        <div class="reiniciar" id="botonReiniciar"><i data-lucide="rotate-ccw"></i>
+        </div>
         <div class="filtro-dentro">
+
        <div class="botonOrdenar">
+        
             <button class="ordenar" id="ordenar">        
                 Ordenar <span class="triangulo"><div id="triangulo1"> ▼</div></span>
             </button>
@@ -331,13 +362,13 @@
 </div>
 
 <div class="container-grid-fuera">
-
 <div class="container-grid" id="container-grid">
     
      
 
     
    
+</div>
 </div>
 </div>
 
@@ -422,6 +453,10 @@
 
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
 
     
 </body>

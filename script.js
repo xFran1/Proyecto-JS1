@@ -590,6 +590,15 @@ if(ordenar){
      
     }
    
+    document.getElementById("botonReiniciar").addEventListener("click",function(){
+      productos.forEach(element => {
+        element.mostrar=true;
+      });
+      actualizarProductos();
+      console.log("reiniciado")
+    });
+
+
     document.getElementById("pagar").addEventListener("click",function(){
 
       if(storedUsername){
@@ -615,9 +624,9 @@ if(ordenar){
       containerGridProductoImagen.style.marginTop="20px"
   
       var boxShadowImage = document.createElement("img")
-      boxShadowImage.style.boxShadow="1px 1px 1px grey";
-      boxShadowImage.style.width="180px"
-      boxShadowImage.style.height="260px"
+      boxShadowImage.style.boxShadow="1px 2px 2px grey";
+      boxShadowImage.style.width="170px"
+      boxShadowImage.style.height="230px"
       boxShadowImage.src=elemento.foto
   
       var containerGridProductoTapa = document.createElement("div")
