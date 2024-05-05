@@ -231,9 +231,9 @@ if(ordenar){
     let usuarioInicioSesionBlock =  document.getElementById("usuarioIncioSesionBlock")
     let barrita =  document.getElementById("barrita") //Esta barrita es para quitar una parte del border-top y que quede bien 
     let cerrarSesionDiv =document.getElementById("cerrarSesionDiv")
+    var storedUsername = sessionStorage.getItem('username');                         //si no esta registrado y si si lo esta podra cerrar sesion
 
     document.getElementById("usuarioGrande").addEventListener('mouseenter', function() { //En caso de que el raton se quite del simbolo se abrira el div donde puede iniciar sesion 
-       var storedUsername = sessionStorage.getItem('username');                         //si no esta registrado y si si lo esta podra cerrar sesion
      
     
       if(storedUsername){
@@ -323,8 +323,36 @@ if(ordenar){
  
  
     
+    //region Buscar
+    let buscadorInput =document.getElementById("buscador");
     
-    
+    document.getElementById("buscador1").addEventListener("click",function(){
+
+      console.log("qda asi")
+      productos.forEach(element => {
+        let nombre=element.nombre;
+        console.log(nombre)
+
+        if(nombre.toLowerCase().includes(buscadorInput.value.toLowerCase())){
+          element.mostrar=true;
+
+        }
+        else{
+          element.mostrar = false;
+
+        }
+      });
+      actualizarProductos();
+
+      productos.forEach(element => {
+       
+
+        if(element.mostrar===true){
+          console.log("he mostrado"+element.nombre)
+        }
+        
+      });
+    });
     
     //Grid Padre
     var containerGrid=document.getElementById("container-grid")//Este es el grid padre
@@ -353,11 +381,17 @@ if(ordenar){
     let estaCarro = true;
     document.getElementById("carritoCompra").addEventListener("click",function(){ //Con este evento si se clicka en el carro este se mostrará y si se vuelve a clickar se ocultará
       let carro = document.getElementById("cesta")
+      let carro1 = document.getElementById("cesta1")
+
 
       if(estaCarro){
         carro.style.display="block"
+        carro1.style.display="block"
+
       }else{
         carro.style.display="none"
+        carro1.style.display="none"
+
       }
 
       estaCarro=!estaCarro;
@@ -380,7 +414,6 @@ if(ordenar){
     function actualizarCesta(){ //Con esto actualizo la cesta
       let valorTodosProductos = 0;
       let valor = 0;
-
       while(interiorScroll.firstChild){  //Con esto quito todas las compras que se hayan hecho para actualizarlas y evitar que se dupliquen
         interiorScroll.removeChild(interiorScroll.firstChild)
       }
@@ -485,15 +518,40 @@ if(ordenar){
         let precioCoste = document.createElement("div")
         precioCoste.classList.add("precioCoste")
         let precioFinal = contador*nPrecio
+        let PrecioTotal = document.getElementById('PrecioTotal');
+
         precioFinal = precioFinal.toFixed(2)
+        precioFinal = parseFloat(precioFinal)
         precioCoste.textContent=precioFinal
         valorTodosProductos+=precioFinal
-
+        PrecioTotal.textContent=valorTodosProductos;
         let simboloEuro = document.createElement("div")
         simboloEuro.classList.add("simboloEuro")
         simboloEuro.textContent="€"
+        let envio = document.getElementById("envio")
+        let contenido = document.getElementById("contenidoEnvio")
+         let envio1 = 0;
+        if(valorTodosProductos<30){
+          envio1=5;
+        }
 
+        if(envio1==5){
+          envio.style.display="block"
+          contenido.textContent=envio1+"€";
+        }else{
+          contenido.textContent="Gratis"
+        }
+        
+        
+        let precioFinal1 = document.getElementById("PrecioFinal");
+        precioFinal1.textContent=valorTodosProductos+envio1;
+        if(valorTodosProductos!=0){
+          let precioFinal = document.getElementById("precioFinal")
+          precioFinal.style.display="block"
+        }else{
+          precioFinal.style.display="none"
 
+        }
         divFoto.appendChild(fotoBorde)
 
         comprasDiv.appendChild(divFoto);
@@ -532,6 +590,17 @@ if(ordenar){
      
     }
    
+    document.getElementById("pagar").addEventListener("click",function(){
+
+      if(storedUsername){
+        alert("Pedido realizado con exito")
+      }else{
+        alert("Debe iniciar sesión para poder realizar pedidos")
+      }
+    
+
+    });
+
     //region Funcion Actualizar
     function actualizarProductos(){ //Con esta funcion creo todos los libros que esten en el array
       borrar() //Al actualizar borro todo lo que contenga containergrid("Es el div donde almaceno todos los libros al mostrarlos") para evitar que se amontonen los datos 
