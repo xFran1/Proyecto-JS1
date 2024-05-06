@@ -19,7 +19,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 35%;
     background: inherit; /* Hereda el fondo del contenedor */
     filter: blur(5px); /* Aplica el desenfoque */
     z-index: -1; /* Asegura que esté detrás del contenido */
@@ -29,7 +29,7 @@ body{
     background: rgb(78, 78, 246);
     padding: 5px;
     width: 25vw;
-    height: 50vh;
+    height: 35vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -135,7 +135,9 @@ font-size: 14px;
 }
 
 .botonLogIn{
-margin-left: 160px;
+    position: absolute;
+margin-left: 155px;
+margin-top: 10px;
 }
 .botoncito{
     margin-top: 25px;
@@ -161,13 +163,11 @@ cursor: pointer;
 }
 .contraPerdida{
 color: black;
-cursor: pointer;
-
 
 }
 .contraPerdida:hover{
     color: blue;
-    border-bottom: 1px solid blue;   
+    
     }
     .signUp{
         color: black;

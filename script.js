@@ -240,11 +240,15 @@ if(ordenar){
         usuarioInicio.style.border="2px solid black"
         usuarioInicio.style.borderBottom="none"
         cerrarSesionDiv.style.display="block"
+        usuarioInicioSesionBlock.style.display="none"
+
 
     }else{
       usuarioInicio.style.border="2px solid black"
       usuarioInicio.style.borderBottom="none"
       usuarioInicioSesionBlock.style.display="block"
+      cerrarSesionDiv.style.display="none"
+
     }
     
     
@@ -314,6 +318,8 @@ if(ordenar){
    usuarioInicio.style.border="2px solid black"
    usuarioInicio.style.borderBottom="none"
    usuarioInicioSesionBlock.style.display="block"
+   cerrarSesionDiv.style.display="none"
+
 
  }
  
@@ -328,10 +334,9 @@ if(ordenar){
     
     document.getElementById("buscador1").addEventListener("click",function(){
 
-      console.log("qda asi")
       productos.forEach(element => {
         let nombre=element.nombre;
-        console.log(nombre)
+        //console.log(nombre)
 
         if(nombre.toLowerCase().includes(buscadorInput.value.toLowerCase())){
           element.mostrar=true;
@@ -344,14 +349,7 @@ if(ordenar){
       });
       actualizarProductos();
 
-      productos.forEach(element => {
-       
-
-        if(element.mostrar===true){
-          console.log("he mostrado"+element.nombre)
-        }
-        
-      });
+      
     });
     
     //Grid Padre
@@ -359,6 +357,22 @@ if(ordenar){
     
     //region windowLoader
     let divNombreUsuario = document.getElementById("divNombreUsuario") //Este es el div del nombre del usuario
+
+
+    document.getElementById("topseller").addEventListener("click",function(){
+
+      productos.forEach(element => {
+        if(element.novedad===true){
+          element.mostrar=true;
+        }else{
+          element.mostrar=false;
+        }
+      });
+      actualizarProductos();
+
+
+    });
+
 
     window.addEventListener('load', function() {
       var storedUsername = sessionStorage.getItem('username'); //Se obtiene el usuario en caso de que haya
@@ -411,8 +425,10 @@ if(ordenar){
     let textoInterior = document.getElementById("textoInterior")
     textoInterior.value=0;
 
+    let valorTodosProductos = 0;
+
     function actualizarCesta(){ //Con esto actualizo la cesta
-      let valorTodosProductos = 0;
+      valorTodosProductos=0;
       let valor = 0;
       while(interiorScroll.firstChild){  //Con esto quito todas las compras que se hayan hecho para actualizarlas y evitar que se dupliquen
         interiorScroll.removeChild(interiorScroll.firstChild)
@@ -425,7 +441,18 @@ if(ordenar){
           listaProductosIndividualesComprados.push(elemento);
         }
       });
+      if(listaCompras.length===0){
+        console.log("aqui")
+        valorTodosProductos=0;
+        PrecioTotal.textContent=valorTodosProductos
+        envio.style.display="none"
+        contenido.style.display="none"
+        precioFinal1=0;
+        precioFinal1.textContent=0;
 
+
+
+      }
       listaProductosIndividualesComprados.forEach(productoIndividual=>{ //Se recorre uno a uno comprobando cuantos hay de cada
        //Se refrescan las variables en cada bucle
         let contador = 0;
@@ -433,6 +460,8 @@ if(ordenar){
         let nLibro = "";
         let nPrecio = "";
         let nImagen = "";
+
+        
 
         listaCompras.forEach(elemento=>{ //Con esto consigo saber cuantos productos de cada tipo ha comprado el cliente
           if(elemento===productoIndividual){
@@ -446,8 +475,7 @@ if(ordenar){
         valor+=contador //Sumo la cantidad de libros de cada tipo a la variable valor
         
 
-       
-
+        
         productos.forEach(producto =>{ //En caso de que productoNombre sea igual que productoIndividual se cogen sus instancias del constructor
 
           if(producto.nombre===productoIndividual){ //Asigno los valores del libro en cuestion a estas variables
@@ -508,6 +536,8 @@ if(ordenar){
           
                      });
 
+
+
         let coste = document.createElement("div")
         coste.classList.add("coste")
 
@@ -524,6 +554,7 @@ if(ordenar){
         precioFinal = parseFloat(precioFinal)
         precioCoste.textContent=precioFinal
         valorTodosProductos+=precioFinal
+        valorTodosProductos=parseFloat(valorTodosProductos.toFixed(2))
         PrecioTotal.textContent=valorTodosProductos;
         let simboloEuro = document.createElement("div")
         simboloEuro.classList.add("simboloEuro")
@@ -531,14 +562,20 @@ if(ordenar){
         let envio = document.getElementById("envio")
         let contenido = document.getElementById("contenidoEnvio")
          let envio1 = 0;
+            
+           
+
         if(valorTodosProductos<30){
           envio1=5;
         }
 
         if(envio1==5){
           envio.style.display="block"
+          contenido.style.display="block"
           contenido.textContent=envio1+"€";
         }else{
+          contenido.style.display="block"
+
           contenido.textContent="Gratis"
         }
         
@@ -584,7 +621,6 @@ if(ordenar){
         
       }
       textoInterior.textContent=valor //Se asigna al circulo rojo al lado de la cesta la cantidad de libros en la cesta
-      //console.log("tengo"+textoInterior.value)
 
 
      
@@ -595,19 +631,46 @@ if(ordenar){
         element.mostrar=true;
       });
       actualizarProductos();
-      console.log("reiniciado")
     });
 
 
     document.getElementById("pagar").addEventListener("click",function(){
 
       if(storedUsername){
-        alert("Pedido realizado con exito")
+        if(valorTodosProductos===0){
+          alert("No hay libros")
+        }else{
+          alert("Pedido realizado con exito")
+
+        }
       }else{
         alert("Debe iniciar sesión para poder realizar pedidos")
       }
     
 
+    });
+
+    document.getElementById("subscribirse").addEventListener("click",function(){
+      let nombre = document.getElementById("nombre1").value
+      let correo = document.getElementById("correo1").value
+      let nombre1 = document.getElementById("nombre1")
+      let correo1 = document.getElementById("correo1")
+
+      if(nombre.trim()===""||correo.trim()===""){
+        alert("Datos incorrectos")
+
+
+      }else{
+        if(correo.includes("@")){
+          nombre1.value=""
+          correo1.value=""
+          alert("Se ha subscrito a la NEWSLETTER")
+        }else{
+          alert("datos incorrectos")
+        }
+        
+      }
+      
     });
 
     //region Funcion Actualizar
@@ -616,9 +679,9 @@ if(ordenar){
 
       productos.forEach(elemento =>{
     if(elemento.mostrar===true){ //Depende del filtrado que se haya realizado si el elemento tiene mostrar como true se mostrara
-      console.log(elemento.nombre);
       var containerGridProducto = document.createElement("div")
       containerGridProducto.classList.add("container-grid-producto")
+      containerGridProducto.style.boxShadow="2px 2px 10px grey"
   
       var containerGridProductoImagen = document.createElement("div")
       containerGridProductoImagen.style.marginTop="20px"
@@ -719,6 +782,25 @@ if(ordenar){
         
         actualizarCesta()
       }
+
+      if(elemento.novedad===true){
+        var topSeller = document.createElement("div")
+        topSeller.style.position="absolute"
+        topSeller.style.width="80px"
+        topSeller.style.height="20px"
+        topSeller.style.backgroundColor="#FC9E89"
+        topSeller.textContent="TOP SELLER"
+        topSeller.textAlign="center"
+        topSeller.style.alignItems="center"
+        topSeller.style.fontSize="13px"
+        topSeller.style.marginTop="25px"
+        topSeller.style.border="1px solid grey"
+        topSeller.style.boxShadow="1px 1px 1px black"
+        containerGridProducto.appendChild(topSeller)
+
+      }
+     
+
       botoncito.classList.add("botoncito")
           
       juntar1.appendChild(circulo)
@@ -727,7 +809,7 @@ if(ordenar){
   
       simbolo1.appendChild(iconoCarrito)
   
-  
+      
       juntar1.appendChild(botoncito)
   
       containerGridProducto.appendChild(juntar1)
@@ -768,6 +850,8 @@ if(ordenar){
       sessionStorage.clear(); //Se limpia el sesion storage
       divNombreUsuario.textContent="";
       cerrarSesionDiv.style.display="none";
+      location.reload();
+
     });
 
     //region Array
@@ -1445,6 +1529,12 @@ document.addEventListener("DOMContentLoaded", function() { //Al refrescarse la p
 
     });
 
+    document.getElementById("perderContra").addEventListener("click",function(){
+
+      window.location.href = "../perderContrasena/perdercontra.html"
+
+     });
+
     document.getElementById("botoncito").addEventListener("click",function(){
       let valido = true; //Sera true hasta que se falle en algun apartado
 
@@ -1461,14 +1551,12 @@ document.addEventListener("DOMContentLoaded", function() { //Al refrescarse la p
       if(usuarioIDValue.trim()===""){
         usuarioInvalido.style.display="block";
         valido=false;
-        console.log("error1")
         
       }
 
      if(passwordValue.trim()===""){
       contraInvalida.style.display="block";
       valido=false;
-      console.log("error2")
 
      }
 
@@ -1488,6 +1576,8 @@ document.addEventListener("DOMContentLoaded", function() { //Al refrescarse la p
      }
 
     });
+
+  
 }else{
 
 }
@@ -1560,6 +1650,8 @@ if(continueCheckbox){ //Este es el apartado de registrarse
      
          });
          
+        
+
         document.getElementById("botoncito").addEventListener("click",function(){//Se comprueba todos los inputs que cumplan las conficiones
           let valido = true;
           let usuarioIDValue = document.getElementById("usuarioID").value;
@@ -1614,7 +1706,7 @@ if(continueCheckbox){ //Este es el apartado de registrarse
     
           alert("Vuelva a introducir los datos")
           passwordVerificar.value=""
-    z
+    
          }else{
           
           if(checkeada===true){
@@ -1639,18 +1731,54 @@ if(continueCheckbox){ //Este es el apartado de registrarse
         checkedBox.addEventListener("change", function() { // Con esto consigues que si se registra y puede mantener la sesion iniciada
           if (checkedBox.checked) { 
             checkeada=true;
-            console.log("El checkbox está marcado");
+            //console.log("El checkbox está marcado");
 
         } else {
-            console.log("El checkbox no está marcado");
+            //console.log("El checkbox no está marcado");
             checkeada=false;
 
 
         }
         });
+
+       
   
   
 }
+
+let contraPerdida = document.getElementById("contraPerdida")
+
+if(contraPerdida){
+  //region contraPerdida
+document.getElementById("botoncito").addEventListener("click",function(){
+let valido = true; //Sera true hasta que se falle en algun apartado
+  
+        let usuarioIDValue = document.getElementById("usuarioID").value; //Se necesita el .value para poder hacer un .trim
+        let usuarioID = document.getElementById("usuarioID");
+
+       
+       
+        if(usuarioIDValue.trim()===""){
+          valido=false;
+        }
+
+       if(valido===false){
+        usuarioID.value=""
+  
+  
+        alert("Vuelva a introducir los datos")
+  
+       }else{
+        alert("Se le ha enviado un correo para restablecer su contraseña")
+      
+        window.location.href = "../index.html";
+  
+       }
+  
+      });
+  }else{
+  
+  }
 
 
 

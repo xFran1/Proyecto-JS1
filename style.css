@@ -11,6 +11,27 @@ body{
     scrollbar-color: #09f rgb(252, 221, 137);
 
 }
+
+.nada{
+    outline:"none";
+    text-decoration: none;
+    color: black;
+}
+.nada:hover{
+    color: #ffffff;
+
+transition: color 0.4s ease ;
+}
+.nada1{
+    outline:"none";
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.nada1:hover{
+    color: #ffffff;
+
+transition: color 0.4s ease ;
+}
 .pagar:hover{
     background-color: rgb(183, 244, 92);
     cursor: pointer;
@@ -1129,7 +1150,7 @@ gap: 7px;
     font-size: 15px;
     background-color: rgb(251, 247, 240);
     border: 2px solid black;
-    
+    z-index: 15;
 }
 
 
